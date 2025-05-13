@@ -73,6 +73,13 @@ app.post("/generate-pdf", (req, res) => {
   doc.end();
 });
 
+if (require.main === module) {
+  const PORT = process.env.PORT || 3001;
+  app.listen(PORT, () => {
+    console.log(`✅ Server avviato su http://localhost:${PORT}`);
+  });
+}
+
 // ❌ NON USARE app.listen
 // ✅ Esporta l'app per Vercel
 module.exports = app;
