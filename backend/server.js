@@ -7,7 +7,7 @@ const PDFDocument = require("pdfkit");
 const app = express();
 
 app.use(cors({
-  origin: ["https://certificato.vercel.app"],
+  origin: ["https://certificati-medici.vercel.app"],
   methods: ["GET", "POST", "OPTIONS"],
   credentials: true,
   allowedHeaders: ["Content-Type", "Authorization"]
